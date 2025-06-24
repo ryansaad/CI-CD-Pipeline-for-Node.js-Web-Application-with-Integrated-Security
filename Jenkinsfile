@@ -35,7 +35,7 @@ pipeline {
                 script {
                     withDockerRegistry(toolName: 'docker') {
                         sh "docker build -t demonodejs ."
-                        sh "docker tag demonodejs usernamw.nodejs:latest ."
+                        sh "docker tag demonodejs username/nodejs:latest ."
                         sh "docker push username/nodejs:latest"
                     }
                 }
